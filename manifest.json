@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Set Erudia as Default Search Engine",
+  "version": "1.0",
+  "permissions": ["searchProvider", "tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Erudia",
+      "keyword": "erudia",
+      "search_url": "https://erudiasearch.com/search?method=index&q={searchTerms}",
+      "favicon_url": "https://erudiasearch.com/favicon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://erudiasearch.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "waterlogo.png",
+      "48": "waterlogo.png",
+      "128": "waterlogo.png"
+    }
+  }
+}
