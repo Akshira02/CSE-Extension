@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Set Erudia as Default Search Engine",
+  "name": "Erudia",
+  "description": "Make Erudia your default search engine. ",
   "version": "1.0",
   "permissions": ["searchProvider", "tabs", "activeTab"],
   "background": {
@@ -29,9 +30,9 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "waterlogo.png",
-      "48": "waterlogo.png",
-      "128": "waterlogo.png"
+      "16": "128.png",
+      "48": "128.png",
+      "128": "128.png"
     }
   }
 }
