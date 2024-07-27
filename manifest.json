@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Erudia",
-  "description": "Make Erudia your default search engine. ",
+  "description": "Make Erudia your default search engine.",
   "version": "1.0",
-  "permissions": ["searchProvider", "tabs", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
